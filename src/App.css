@@ -6,6 +6,9 @@
   text-align: center;
 }
 .item {
-  flex: 1;
-  margin: 30;
+  flex: 1; 
+  /* padding: 30px; */
+}
+img {
+  width: 100%;
 }
