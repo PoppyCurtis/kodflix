@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
-img {
-  height: 100%;
+.container {
+  display: flex;
+  text-align: center;
+}
+.item {
+  flex: 1;
+  margin: 30;
 }
