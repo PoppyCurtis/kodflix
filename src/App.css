@@ -2,11 +2,11 @@
   text-align: center;
 }
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   text-align: center;
 }
 .item {
-  flex: 1; 
   position: relative;
   overflow: hidden;
 }
@@ -37,7 +37,6 @@ img {
 .Gallery {
   text-align: center;
 }
-
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;

@@ -14,8 +14,6 @@ export default function Gallery() {
                 <TvShow  name="Suits" logo={suits} id="suits"/>
                 <TvShow name="Game of Thrones" logo={got} id="got" />
                 <TvShow name="Inside Out" logo={insideOut} id="insideout"/>
-            </div>
-            <div className="container">
                 <TvShow name="Big Hero 6" logo={bigHero6} id="bighero"/>
                 <TvShow name="Fairy Tail" logo={fairyTale} id="fairytail"/>
                 <TvShow name="Orange Is The New Black" logo={ointb} id="ointb"/>
