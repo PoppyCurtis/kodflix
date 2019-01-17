@@ -14,7 +14,7 @@ export default class extends React.Component {
             this.setState({
                 welcomeMessage: "Stay with us"
             });
-        }, 3000)
+        }, 3000);
     }
     render() {
         return (
