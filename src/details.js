@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import getGalleryImages from './getGalleryImages.js';
 
 export default class extends React.Component {
@@ -19,12 +19,17 @@ export default class extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <h1>{this.state.gallery.name}</h1>
-                <Link to="/">Back to Home page</Link>
-            </div>
-        );
+        if (this.state.gallery === undefined) {
+            return <Redirect to='/not-found'></Redirect>;
+        }
+        else {
+            return (
+                <div>
+                    <h1>{this.state.gallery.name}</h1>
+                    <Link to="/">Back to Home page</Link>
+                </div>
+            );
+        }
     }
 
 }
