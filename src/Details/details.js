@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getGalleryImages from './getGalleryImages.js';
+import './details.css';
+import getGallery from '../getGalleryImages.js';
 
 export default class extends React.Component {
 
@@ -13,7 +14,7 @@ export default class extends React.Component {
 
     componentDidMount() {
         let galleryImageId = this.props.match.params.tvShowId;
-        let gallery = getGalleryImages()
+        let gallery = getGallery()
             .find(gallery => gallery.id === galleryImageId);
         this.setState({ gallery: gallery });
     }
@@ -24,8 +25,15 @@ export default class extends React.Component {
         }
         else {
             return (
-                <div>
+                <div className="details">
                     <h1>{this.state.gallery.name}</h1>
+                    <div className="content">
+                        <div className="text">{this.state.gallery.details}</div>
+                        <div className="image" >
+                            <img src={this.state.gallery.logo}
+                                alt={this.state.gallery.name}></img>
+                        </div>
+                    </div>
                     <Link to="/">Back to Home page</Link>
                 </div>
             );
