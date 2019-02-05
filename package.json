@@ -5,19 +5,21 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "npm-run-all -p build start-backend" ,
+    "start": "npm-run-all build start-backend",
     "start-frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev" : "npm-run-all -p start-frontend start-backend"
+    "start-dev": "npm-run-all -p start-frontend start-backend"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,7 +30,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "npm-run-all": "^4.1.5"
-  }
+  "devDependencies": {}
 }
