@@ -11,6 +11,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
+    "start": "npm-run-all -p build start-backend" ,
     "start-frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
