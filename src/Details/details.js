@@ -17,6 +17,14 @@ export default class extends React.Component {
         let gallery = getGallery()
             .find(gallery => gallery.id === galleryImageId);
         this.setState({ gallery: gallery });
+
+        fetch('/rest/shows')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function(myJson) {
+            console.log (JSON.stringify(myJson));
+        });
     }
 
     render() {
@@ -39,6 +47,5 @@ export default class extends React.Component {
             );
         }
     }
-
 }
 

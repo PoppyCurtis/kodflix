@@ -20,11 +20,5 @@ class App extends Component {
     );
   }
 }
-fetch('/rest/shows')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
-  });
+
 export default App;
