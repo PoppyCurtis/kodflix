@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import TvShow from './TvShow.js';
-//import getImageGallery from './getGalleryImages';
+import TvShow from './TvShow';
 
 
 export default class Gallery extends Component {
@@ -14,10 +13,10 @@ export default class Gallery extends Component {
 
     componentDidMount() {
         fetch('/rest/shows')
-            .then(function (response) {
+            .then( response => {
                 return response.json();
             })
-            .then(function (movies) {
+            .then(movies => {
                 this.setState({ movies: movies })
             });
     }
