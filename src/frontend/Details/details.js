@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './details.css';
+import '../Loading/Loading.css';
+import Loading from '../Loading/Loading';
 
 
 export default class extends React.Component {
@@ -21,7 +23,6 @@ export default class extends React.Component {
                 let galleryImageId = this.props.match.params.tvShowId;
                 let gallery = galleries.find(show => show.id === galleryImageId);
                 this.setState({ gallery: gallery });
-
             });
     }
 
@@ -32,12 +33,14 @@ export default class extends React.Component {
         }
         else if (this.state.gallery.id) {
             return (
+
                 <div className="details">
+
                     <h1>{gallery.name}</h1>
                     <div className="content">
                         <div className="text">{gallery.details}</div>
                         <div className="image" >
-                           <img
+                            <img
                                 src={require(`../common/images/${gallery.id}.jpg`)}
                                 alt={`${gallery.id}`}
                             />
@@ -47,15 +50,13 @@ export default class extends React.Component {
                 </div>
             );
         }
+
         else {
             return (
-                <div className="details">
-                    <div className="content">
-                    Loading...
-                    </div>
-                    <Link to="/">Back to Home page</Link>
+                <div className="container">
+                    <Loading />
                 </div>
-            );           
+            );
         }
     }
 
