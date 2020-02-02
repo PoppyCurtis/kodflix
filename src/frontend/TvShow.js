@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Gallery from './Gallery';
 
 export default function TvShow(properties) {
   return (
