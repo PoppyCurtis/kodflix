@@ -4,6 +4,7 @@ import Gallery from './Gallery.js';
 import Details from './Details/details.js';
 import NotFound from './NotFound.js';
 import ReactGA from 'react-ga';
+import Menu from './Menu/Menu';
 import './App.css';
 
 class App extends Component {
@@ -11,10 +12,11 @@ class App extends Component {
 
     ReactGA.initialize('UA-157101100-1');
     ReactGA.pageview(window.location.pathname);
-    
+
     return (
 
       <div className="Gallery">
+        <Menu />
         <Switch>
           <Route exact path='/' component={Gallery} />
           <Route exact path='/not-found' component={NotFound} />

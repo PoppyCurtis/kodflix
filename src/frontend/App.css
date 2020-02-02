@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   text-align: center;
+ 
 }
 .item {
   position: relative;
@@ -42,4 +43,6 @@ img {
     flex-direction: column;
   }
 }
-
+menu {
+  background-color: #000000;
+}
