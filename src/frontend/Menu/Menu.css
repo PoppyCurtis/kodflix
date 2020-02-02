@@ -1,7 +1,35 @@
+
+#menuContainer {
+    height: 0px;
+}
+ .is-visible {
+    height: 100%;
+    width: 300px;
+    margin: 0px;
+    float: left; 
+    background-color: black;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+  }
+
+ .not-visible {
+    display: none;
+    height: 100%;
+    width: 300px;
+    margin: 0px;
+    float: left;
+  }
+
 #menu {
-    background-color: grey;
+    background-color: #f3f3f3;
     border-width: 0;
     display: inherit;
+    position: relative;
+    left: 10px;
+    top: 0px;
+    z-index: 50;
 }
 
 #image {

@@ -46,3 +46,7 @@ img {
 menu {
   background-color: #000000;
 }
+.menuContainer {
+  height: 100%;
+  width: 300px;
+}
