@@ -15,18 +15,18 @@ export default class extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/rest/shows')
+        let galleryImageId = this.props.match.params.tvShowId;
+        fetch(`/shows/${galleryImageId}`)
             .then(response => {
                 return response.json();
             })
             .then(galleries => {
-                let galleryImageId = this.props.match.params.tvShowId;
-                let gallery = galleries.find(show => show.id === galleryImageId);
-                this.setState({ gallery: gallery });
+                this.setState({ gallery: galleries });
             });
     }
 
     render() {
+
         let gallery = this.state.gallery;
         if (this.state.gallery === undefined) {
             return <Redirect to='/not-found'></Redirect>;

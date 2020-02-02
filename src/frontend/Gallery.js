@@ -11,8 +11,6 @@ export default class Gallery extends Component {
             movies: []
         }
     }
-
-
     componentDidMount() {
         fetch('/rest/shows')
             .then(response => {
