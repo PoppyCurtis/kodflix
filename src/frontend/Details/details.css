@@ -1,19 +1,24 @@
 .details {
    background-color: #000000;
    color: #E1E1E1;
+   z-index: -2;
 }
 .details .content{
    display: flex;
+  
    color: #E1E1E1;
    background-color: #000000;
    font-family: Arial, Helvetica, sans-serif;
+   
   
 }
 .details .content .text,
 .details .content .image {
+  
    padding-left: 35px;
    padding-right: 35px; 
    flex: 1;
+  
    
 }
 

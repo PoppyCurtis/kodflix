@@ -36,6 +36,8 @@ img {
   visibility: visible;
 }
 .Gallery {
+  text-align: justify;
+  text-justify: inter-word;
   text-align: center;
 }
 @media only screen and (max-width: 600px) {

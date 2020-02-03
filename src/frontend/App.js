@@ -14,16 +14,17 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname);
 
     return (
-
-      <div className="Gallery">
-        <Menu />
-        <Switch>
-          <Route exact path='/' component={Gallery} />
-          <Route exact path='/not-found' component={NotFound} />
-          <Route exact path='/:tvShowId' component={Details} />
-        </Switch>
+      <div>
+      
+        <div className="Gallery"> 
+        <Menu />   
+          <Switch>
+            <Route exact path='/' component={Gallery} />
+            <Route exact path='/not-found' component={NotFound} />
+            <Route exact path='/:tvShowId' component={Details} />
+          </Switch>
+        </div>
       </div>
-
     );
   }
 }
